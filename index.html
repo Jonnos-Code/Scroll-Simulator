@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>Jonno's Scroll Calculator</title>
+        <link rel="icon" type="image/x-icon" href="/assets/cursed.webp">
+        <!--Discord Embed Here-->
+        <meta content="Jonno's Scroll Calculator" property="og:title">
+        <meta content="Statistical Analysis for Cursed Scroll upgrades in Vesteria" property="og:description">
+        <meta content="https://scroll.jonserver.com" property="og:url">
+        <meta content="/assets/cursed.webp" property="og:image">
+        <meta content="#440077" data-react-helmet="true" name="theme-color">
+    </head>
+    <body>
+        <nav>
+            <div style="float:left;height:100%;width:100%;margin-top:2px;">
+                <div onclick="setType('atk');setMode('general')" class="hbutton" style="margin-right:30px;margin-left:60px">
+                        <img class="bicon" src="assets/sword.png" style="margin-bottom:1px">
+                    <span class="popuptext">Weapon</span>
+                </div>
+                <div onclick="setType('def');setMode('general')" class="hbutton" style="margin-right:30px">
+                        <img class="bicon" src="assets/armor.png" style="margin-bottom:1px">
+                    <span class="popuptext">Armor</span>
+                </div>
+                <div onclick="setType('def');setMode('headgear')" class="hbutton" style="margin-right:30px">
+                        <img class="bicon" src="assets/hat.png" style="margin-bottom:1px">
+                    <span class="popuptext">Headgear</span>
+                </div>
+                <div onclick="setType('atk');setMode('offhand')" class="hbutton" style="margin-right:30px">
+                        <img class="bicon" src="assets/shield.png" style="margin-bottom:1px">
+                    <span class="popuptext">Offhand</span>
+                </div>
+            </div>
+            <div style="float:right;height:100%;width:100%;margin-top:2px;">
+                <div class="hbutton" style="float:right;margin-right:60px">
+                    <a href="https://github.com/Jonnos-Code/" target="_blank">
+                        <img class="bicon" src="assets/github.png" style="margin-bottom:1px">
+                    </a>
+                    <span class="popuptext">My Github</span>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="sidebar">
+                <div id="stats">
+                    <div class="checkLabel">Select all stats on item</div>
+                    <div class="checks">
+                        <div class="c1">
+                            <input type="checkbox" id="strcheck" name="statcheck" onclick="update()">
+                            <label for="strcheck" style="color:#c6905a">STR</label>
+                        </div>
+                        <div class="c2">
+                            <input type="checkbox" id="intcheck" name="statcheck" onclick="update()">
+                            <label for="intcheck" style="color:#57c4c5">INT</label>
+                        </div>
+                    </div>
+                    <div class="checks">
+                        <div class="c1">
+                            <input type="checkbox" id="dexcheck" name="statcheck" onclick="update()">
+                            <label for="dexcheck" style="color:#c68abc">DEX</label>
+                        </div>
+                        <div class="c2">
+                            <input type="checkbox" id="vitcheck" name="statcheck" onclick="update()">
+                            <label for="vitcheck" style="color:#c68688">VIT</label>
+                        </div>
+                    </div>
+                    <div class="checks">
+                        <div class="c1">
+                            <input type="checkbox" id="hpcheck" name="statcheck" onclick="update()">
+                            <label for="hpcheck" style="color:#e12228">HP</label>
+                        </div>
+                        <div class="c2">
+                            <input type="checkbox" id="mpcheck" name="statcheck" onclick="update()">
+                            <label for="mpcheck" style="color:#0097fe">MP</label>
+                        </div>
+                    </div>
+                    <div class="checks">
+                        <div class="c1">
+                            <input type="checkbox" id="hprcheck" name="statcheck" onclick="update()">
+                            <label for="hprcheck" style="color:#ff4b50">HPR</label>
+                        </div>
+                        <div class="c2">
+                            <input type="checkbox" id="mprcheck" name="statcheck" onclick="update()">
+                            <label for="mprcheck" style="color:#59bbfe">MPR</label>
+                        </div>
+                    </div>
+                    <div class="checks">
+                        <div class="c1">
+                            <input type="checkbox" id="abrcheck" name="statcheck" onclick="update()">
+                            <label for="abrcheck" style="color:#00c880">ABR</label>
+                        </div>
+                        <div class="c2">
+                            <input type="checkbox" id="magcheck" name="statcheck" onclick="update()">
+                            <label for="magcheck" style="color:#70f1ff">MAG</label>
+                        </div>
+                    </div>
+                    <div class="checks">
+                        <div class="c1">
+                            <input type="checkbox" id="crtcheck" name="statcheck" onclick="update()">
+                            <label for="crtcheck" style="color:#ffee00">CRIT</label>
+                        </div>
+                        <div class="c2">
+                            <input type="checkbox" id="stmcheck" name="statcheck" onclick="update()">
+                            <label for="stmcheck" style="color:#69fa5e">STAM</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="points"></div>
+            </div>
+            <div class="main">
+                <div id="scrolls">
+                    <div class="scroll" id="scroll1">
+                        <div class="cursecheck">
+                            <input type="checkbox" id="cursecheck1" name="cursecheck" onclick="update()" checked>
+                            <label for="cursecheck1">Cursed Scroll?</label>
+                        </div>
+                        <div class="cursedrop">Roll 1:<select name="cursestat" id="curse11" onchange="update()"></select></div>
+                        <div class="cursedrop">Roll 2:<select name="cursestat" id="curse12" onchange="update()"></select></div>
+                        <div class="cursedrop">
+                            <span id="a1">Attack:</span>
+                            <input type="number" name="curseatk" id="atk1" min="0" max="14" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onchange="update()">
+                        </div>
+                    </div>
+                    <div class="scroll" id="scroll2">
+                        <div class="cursecheck">
+                            <input type="checkbox" id="cursecheck2" name="cursecheck" onclick="update()" checked>
+                            <label for="cursecheck2">Cursed Scroll?</label>
+                        </div>
+                        <div class="cursedrop">Roll 1:<select name="cursestat" id="curse21" onchange="update()"></select></div>
+                        <div class="cursedrop">Roll 2:<select name="cursestat" id="curse22" onchange="update()"></select></div>
+                        <div class="cursedrop">
+                            <span id="a2">Attack:</span>
+                            <input type="number" name="curseatk" id="atk2" min="0" max="14" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onchange="update()">
+                        </div>
+                    </div>
+                    <div class="scroll" id="scroll3">
+                        <div class="cursecheck">
+                            <input type="checkbox" id="cursecheck3" name="cursecheck" onclick="update()" checked>
+                            <label for="cursecheck3">Cursed Scroll?</label>
+                        </div>
+                        <div class="cursedrop">Roll 1:<select name="cursestat" id="curse31" onchange="update()"></select></div>
+                        <div class="cursedrop">Roll 2:<select name="cursestat" id="curse32" onchange="update()"></select></div>
+                        <div class="cursedrop">
+                            <span id="a3">Attack:</span>
+                            <input type="number" name="curseatk" id="atk3" min="0" max="14" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onchange="update()">
+                        </div>
+                    </div>
+                    <div class="scroll" id="scroll4">
+                        <div class="cursecheck">
+                            <input type="checkbox" id="cursecheck4" name="cursecheck" onclick="update()" checked>
+                            <label for="cursecheck4">Cursed Scroll?</label>
+                        </div>
+                        <div class="cursedrop">Roll 1:<select name="cursestat" id="curse41" onchange="update()"></select></div>
+                        <div class="cursedrop">Roll 2:<select name="cursestat" id="curse42" onchange="update()"></select></div>
+                        <div class="cursedrop">
+                            <span id="a4">Attack:</span>
+                            <input type="number" name="curseatk" id="atk4" min="0" max="14" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onchange="update()">
+                        </div>
+                    </div>
+                    <div class="scroll" id="scroll5">
+                        <div class="cursecheck">
+                            <input type="checkbox" id="cursecheck5" name="cursecheck" onclick="update()" checked>
+                            <label for="cursecheck5">Cursed Scroll?</label>
+                        </div>
+                        <div class="cursedrop">Roll 1:<select name="cursestat" id="curse51" onchange="update()"></select></div>
+                        <div class="cursedrop">Roll 2:<select name="cursestat" id="curse52" onchange="update()"></select></div>
+                        <div class="cursedrop">
+                            <span id="a5">Attack:</span>
+                            <input type="number" name="curseatk" id="atk5" min="0" max="14" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onchange="update()"></div>
+                    </div>
+                    <div class="scroll" id="scroll6">
+                        <div class="cursecheck">
+                            <input type="checkbox" id="cursecheck6" name="cursecheck" onclick="update()" checked>
+                            <label for="cursecheck6">Cursed Scroll?</label>
+                        </div>
+                        <div class="cursedrop">Roll 1:<select name="cursestat" id="curse61" onchange="update()"></select></div>
+                        <div class="cursedrop">Roll 2:<select name="cursestat" id="curse62" onchange="update()"></select></div>
+                        <div class="cursedrop">
+                            <span id="a6">Attack:</span>
+                            <input type="number" name="curseatk" id="atk6" min="0" max="14" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onchange="update()"></div>
+                    </div>
+                    <div id="offhandPlaceholder" style="display:none"></div>
+                    <div id="offhandSettings" style="display:None">
+                        <div class='container'>
+                            <div style="font-weight:bold;text-align:center;font-size:2vh">Scroll Type</div>
+                            <div style="font-size:2vh"><input type="radio" id="atkradio" name="scrollType" value="atk" onclick="setType('atk')"><label for="atkradio">Attack Scroll</label></div>
+                            <div style="font-size:2vh"><input type="radio" id="defradio" name="scrollType" value="def" onclick="setType('def')"><label for="defradio">Defense Scroll</label></div>
+                        </div>    
+                    </div>
+                    <div id="headgearPlaceholder" style="display:none">
+                        Headgear have a lot of jank with their scrolling mechanics.
+                        They have a hidden Upgrade stat (of which a basic scroll gives 2) that adds stats in addition to a curse's bonus roll. 
+                        Headgear curses give 3-8 upgrades that give 4-14 points (2x-2), so do the math to isolate them from the bonus rolls to ensure the calculator is accurate. 
+                        Upgrade stats change per item, like +1STR on a Bronze Helmet.
+                    </div>
+                    <div id="headgearSettings" style="display:None">
+                        <span style="font-weight:bold">Example 1:</span> Bronze Helmet (+1str upgrade)<br>+8 STR, +10% crit (24 points) -&gt; 8 upgrades, 10 crit<br>+8 STR, +10% crit (22 points) -&gt; 6 upgrades, 10 crit, +2 STR<br>
+                        <span style="font-weight:bold">Example 2:</span> Spider Crown (+0.5 all stats upgrade)<br>+2 all stats (but 4 STR), +5% crit (13) -&gt; 4 upgrades, 5 crit, +2 STR<br>
+                        <span style="font-weight:bold;line-height:120%">For non-cursed headgear scrolls, just directly enter points.</span>
+                    </div>
+                    <div id="final" class="final">
+                        <div>Total Points:<br><span id="score">0</span></div>
+                        <button onclick="reset()">Reset All Scrolls</button>
+                    </div>
+                </div>
+                <div id="table"></div>
+                <div id="summary">
+                    <div class="stat" id="Str"></div>
+                    <div class="stat" id="Int"></div>
+                    <div class="stat" id="Dex"></div>
+                    <div class="stat" id="Vit"></div>
+                    <div class="container">
+                        <div class="stat" id="Hp"></div>
+                        <div class="stat" id="Mp"></div>
+                    </div>
+                    <div class="container">
+                        <div class="stat" id="Hpr"></div>
+                        <div class="stat" id="Mpr"></div>
+                    </div>
+                    <div class="container">
+                        <div class="stat" id="Mag"></div>
+                        <div class="stat" id="Rad"></div>
+                    </div>
+                    <div class="container">
+                        <div class="stat" id="Crt"></div>
+                        <div class="stat" id="Stm"></div>
+                    </div>
+                    <div class="stat" id="Atk"></div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
