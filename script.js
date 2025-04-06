@@ -253,7 +253,7 @@ function update(){
                 $('#curse'+i+'2').prop("selectedIndex", 0);
                 let num = splitRoll(r1)[0];
                 if(num==10){r1=4+' '+splitRoll(r1)[1];r2=6+' '+splitRoll(r1)[1];}//10 -> 4 + 6
-                else if(!num%3&&num!=12){r1=(num/3)+' '+splitRoll(r1)[1];r2=(2*num/3)+' '+splitRoll(r1)[1];}//3 -> 2 + 3
+                else if(num%3==0&&num!=12){r1=(num/3)+' '+splitRoll(r1)[1];r2=(2*num/3)+' '+splitRoll(r1)[1];}//3 -> 2 + 3
                 else{r1=(num/2)+' '+splitRoll(r1)[1];r2=r1;}}//2 -> 1 + 1
             rolls.add(r1);stats.add(splitRoll(r1)[1]);
             rolls.add(r2);stats.add(splitRoll(r2)[1]);
