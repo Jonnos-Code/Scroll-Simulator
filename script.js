@@ -258,7 +258,7 @@ function update(){
             rolls.add(r1);stats.add(splitRoll(r1)[1]);
             rolls.add(r2);stats.add(splitRoll(r2)[1]);
             let scrollScore = 0; scrollScore += parseInt($('#atk'+i).val())||0;
-            if(mode=='headgear'){scrollScore += scrollScore - 2;} //headgear points map
+            if(mode=='headgear'&&scrollScore>=2){scrollScore += scrollScore - 2;} //headgear points map
             if(r1){scrollScore += splitRoll(r1)[0] * values[splitRoll(r1)[1]];}
             if(r2){scrollScore += splitRoll(r2)[0] * values[splitRoll(r2)[1]];}
             $('#a'+i).text(mode=='offhand'?'Atk/Def:':mode=='headgear'?'Upgrade:':type=='atk'?'Attack:':'Defense:');
