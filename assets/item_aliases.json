@@ -35,7 +35,7 @@
   ["golden mushroom", "gmush", "g mush"],
   ["holo coin", "holo token"],
   ["jade token", "jade stack"],
-  ["tribute shop token", "tribute token"],
+  ["tribute shop token", "tribute wars token", "tribute token", "tw token", "tribute wars coin", "tribute coin", "tw coin"],
   ["mark of valor", "marks of valor", "mark", "valor"],
   ["chocolate bar", "choco bar"],
   ["green lollipop", "green lolli", "green loli"],
@@ -67,20 +67,29 @@
 
   ["mysterious orange hat", "cone hat", "cone"],
   ["wise beard", "wisebeard"],
+  ["captains hat", "captain hat", "cap hat"],
+  ["circlet of champions", "champions circlet", "champion circlet", "champ circlet", "champions helm", "champion helm", "champ helm", "champions hat", "champion hat", "champ hat"],
   ["fish bowl", "fishbowl"],
   ["forgotten crown", "forg crown"],
-  ["captains hat", "captain hat", "cap hat"],
   ["spider queens crown", "sqc"],
   ["halloween mask", "xp mask", "ant mask", "wendigo mask", "minotaur mask", "sun god mask", "pharaoh mask", "red dragon mask", "parasite mask"],
 
-  ["cornucopia", "cornu", "corn"],
-  ["yeti fur boots", "yeti boots"],
+  ["champions conduit", "champion conduit", "champ conduit", "champions armor", "champion armor", "champ armor"],
+
   
+  ["cornucopia", "cornu", "corn"],
+
+  ["champions greaves", "champion greaves", "champ greaves", "champions boots", "champion boots", "champ boots"],
+  ["yeti fur boots", "yeti boots"],
+  ["tortoiseskin boots", "tortoise boots", "turtleskin boots", "turtle boots"],
   ["frozen skates", "ice skates", "iceskates", "gift of ice"],
+  
 
   ["aqrabuamelu sabre", "aqra sabre"],
   ["crystal aqrabuamelu sabre", "crystal aqra sabre"],
+  ["champions lance", "champion lance", "champ lance", "champions spear", "champion spear", "champ spear"],
   ["azariahs edge", "aza edge", "aza"],
+  ["champions broadsword", "champion broadsword", "champ broadsword", "champions sword", "champion sword", "champ sword"]
   ["golden dragon sword", "gdrag sword", "gd sword"],
   ["golden dragon bisento", "gdrag bisento", "gd bisento"],
   ["forgotten axe", "forg axe"],
@@ -96,6 +105,7 @@
   ["vesras eviscerator", "eviscerator"],
   ["dragonbane", "dragonsbane"],
   ["malichs edge", "malich edge", "malich sword"],
+  ["gobbletron engine", "gobbletron sword", "thanksgiving engine", "thanksgiving sword", "engine"],
   ["carolers brand", "caroling brand", "caroler brand", "carol brand", "carolers sword", "caroling sword", "caroler sword", "carol sword"],
 
   ["aqrabuamelu nemes", "aqrabuamelu helm", "aqra nemes", "aqra helm"],
@@ -119,6 +129,7 @@
   ["dark knight armor", "dk armor"],
   ["malichs armor", "malich armor"],
 
+  ["champions shield", "champion shield", "champ shield"],
   ["golden dragon shield", "gdrag shield", "gd shield"],
   ["sigil of malisis", "sigil"],
   ["haunted sigil of malisis", "haunted sigil"],
@@ -136,6 +147,8 @@
   ["blistergrass staff", "blistergrass"],
   ["brain staff", "brainstaff"],
   ["capras staff", "capra staff"],
+  ["champions scepter", "champion scepter", "champ scepter", "champions scept", "champion scept", "champ scept"],
+  ["elven hero staff", "elven staff", "elven", "frieren staff"],
   ["forgotten staff", "forg staff"],
   ["golden dragon staff", "gdrag staff", "gd staff"],
   ["leviathan scythe", "levia scythe", "levi scythe", "leviathan staff"],
@@ -147,7 +160,7 @@
   ["wicked witch branch", "ww branch", "wwb"],
   ["poltergeists scepter", "poltergeist scepter", "polt scepter"],
   ["haunted poltergeists scepter", "haunted poltergeist scepter", "haunted polt scepter"],
-  ["gobbletron effigy", "gobbletron staff"],
+  ["gobbletron effigy", "gobbletron staff", "thanksgiving effigy", "thanksgiving staff", "effigy"],
   ["peppermint staff", "peppermint"],
   ["carolers cane", "caroling cane", "caroler cane", "carol cane", "carolers staff", "caroling staff", "caroler staff", "carol staff"],
 
@@ -173,14 +186,16 @@
   ["wicked witch robes", "ww robes", "wwr"],
 
   ["ancient slab", "anc slab", "slab"],
+  ["champions vial", "champion vial", "champ vial", "champions tome", "champion tome", "champ tome"],
   ["coronal tome", "coronal"],
   ["fusion tome", "fusion", "ftome"],
-  ["frontier spellbook", "ff spellbook", "ff tome", "frontier tome"],
+  ["frontier spellbook", "ff spellbook", "ff tome", "frontier tome", "frontier book", "ff book"],
   ["monarch keepers tome", "monarch keeper tome", "monarch tome"],
   ["the enchiridion", "enchiridion", "enchi"],
   ["tomestone", "tombstone","tome stone", "tomb stone"],
   ["haunted tomestone", "haunted tombstone", "haunted tome stone", "haunted tomb stone"],
 
+  ["champions chakram", "champion chakram", "champ chakram", "champions dagger", "champion dagger", "champ dagger"],
   ["eyeball of reckoning ultradagger", "eyeball of reckoning ultra dagger", "eyeball of reckoning dagger", "eyeball of reckoning", "eor ultradagger", "eor ultra dagger",   "eor dagger", "ultradagger", "ultra dagger", "eor"],
   ["forgotten dagger", "forg dagger"],
   ["grizzly hatchet", "hatchet", "grizzly dagger", "grizz dagger", "grizz hatchet"],
@@ -192,18 +207,21 @@
   ["the incisor", "incisor", "inci"],
   ["virtual haladie", "haladie"],
   ["vampiric dagger", "vamp dagger"],
-  ["gobbletron carver", "gobbletron dagger"],
+  ["gobbletron carver", "gobbletron dagger", "thanksgiving carver", "thanksgiving dagger", "carver"],
   ["frozen forgotten dagger", "frozen forg dagger", "frozen forg"],
   ["carolers cinquedea", "caroling cinquedea", "caroler cinquedea", "carol cinquedea", "carolers dagger", "caroling dagger", "caroler dagger", "carol dagger"],
   ["icicle"],
   ["cleaver", "meat cleaver"],
 
+  ["champions tambourine", "champion tambourine", "champ tambourine", "champions drum", "champion drum", "champ drum"],
+  
   ["auktufitis ballista", "auks ballista", "auk ballista", "ballista","auk ball"],
+  ["champions bow", "champion bow", "champ bow"],
   ["dragon bow", "drag bow"],
   ["golden dragon bow", "gdrag bow", "gd bow", "golden drag bow"],
   ["dustwurm longbow", "dwlb"],
   ["forgotten bow", "forg bow"],
-  ["phantom bow", "pbow"],
+  ["phantom bow", "phant bow", "pbow"],
   ["haunted phantom bow", "haunted pbow"],
   ["crystal bast hood", "bast hood", "cbast hood"],
   ["dragon grunt headband", "dragon headband", "grunt headband", "headband"],
@@ -227,11 +245,18 @@
   ["vampiric boots", "vamp boots"],
   ["gravedigger boots", "gd boots"],
 
+  ["clown cart mount", "clown cart", "flying clown cart mount", "flying clown cart", "flying clown car", "clown car"],
   ["ki flight", "ki flight mount"],
   ["nimbus cloud mount", "nimbus mount", "nimbus cloud", "nimbus"],
   ["broom mount", "flying broom mount", "flying broom"],
   ["ghost ship mount", "ghost ship", "ghostship"],
   ["sleigh", "sleigh mount", "gift of warmth"],
-  ["flying mount", "any flying mount", "ki flight", "ki flight mount", "nimbus cloud mount", "nimbus mount", "nimbus cloud", "nimbus", "broom mount", "flying broom mount", "flying broom", "ghost ship mount", "ghost ship", "ghostship", "sleigh", "sleigh mount", "gift of warmth"],
-  ["popstar mount", "popstar", "star mount", "gift of dreams"]
+  ["popstar mount", "popstar", "star mount", "gift of dreams"],
+  ["flying mount", "any flying mount",
+    "ki flight", "ki flight mount",
+    "nimbus cloud mount", "nimbus mount", "nimbus cloud", "nimbus",
+    "broom mount", "flying broom mount", "flying broom",
+    "ghost ship mount", "ghost ship", "ghostship",
+    "sleigh", "sleigh mount", "gift of warmth",
+    "clown cart mount", "clown cart", "flying clown cart mount", "flying clown cart", "flying clown car", "clown car"]
 ]
