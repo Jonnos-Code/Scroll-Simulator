@@ -35,7 +35,7 @@
   ["golden mushroom", "gmush", "g mush"],
   ["holo coin", "holo token"],
   ["jade token", "jade stack"],
-  ["tribute shop token", "tribute wars token", "tribute token", "tw token", "tribute wars coin", "tribute coin", "tw coin"],
+  ["tribute shop token", "tribute war token", "tribute wars token", "tribute token", "tw token", "tribute wars coin", "tribute war coin", "tribute coin", "tw coin"],
   ["mark of valor", "marks of valor", "mark", "valor"],
   ["chocolate bar", "choco bar"],
   ["green lollipop", "green lolli", "green loli"],
@@ -130,7 +130,7 @@
   ["dark knight armor", "dk armor"],
   ["malichs armor", "malich armor"],
 
-  ["champions shield", "champion shield", "champ shield"],
+  ["champions aegis", "champion aegis", "champ aegis", "champions shield", "champion shield", "champ shield"],
   ["golden dragon shield", "gdrag shield", "gd shield"],
   ["sigil of malisis", "sigil"],
   ["haunted sigil of malisis", "haunted sigil"],
